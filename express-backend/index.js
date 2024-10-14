@@ -75,6 +75,21 @@ let movieList = [
   }
 ];
 
+// GET request to get all movies
+app.get('/', (req, res) => {
+  res.send(movieList);
+});
+
+// GET request to get a single movie
+app.get('/:id', (req, res) => {
+  const movie = movieList.find(movieItem => movieItem.id == req.params.id);
+  if (movie) {
+    res.send(movie);
+  } else {
+    res.status(404).send('Movie not found');
+  }
+});
+
 const port = 5000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
