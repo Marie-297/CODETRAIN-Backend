@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Home</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+  <h1 class="font-extrabold lg:text-6xl text-center py-10 sm:text-3xl sm:px-20">Our Services</h1>
+  <div class="flex flex-wrap justify-center w-full px-4 gap-4">
+    
+    <div class="w-96">
+      <img src="./images/img1.jpeg" class="w-96 h-96" alt="home-Photo">
+    </div>
+    <div class="w-96">
+      <img src="./images/img2.jpeg" class="w-96 h-96" alt="home-Photo">
+    </div>
+    <div class="w-96">
+      <img src="./images/img3.jpeg" class="w-96 h-96" alt="home-Photo">
+    </div>
+    <div class="w-96">
+      <img src="./images/img4.jpeg" class="w-96 h-96" alt="home-Photo">
+    </div>
+    <div class="w-96">
+      <img src="./images/img5.jpeg" class="w-96 h-96" alt="home-Photo">
+    </div>
+    <div class="w-96">
+      <img src="./images/img6.jpeg" class="w-96 h-96" alt="home-Photo">
+    </div>
+    <div class="w-96">
+      <img src="./images/img7.jpeg" class="w-96 h-96" alt="home-Photo">
+    </div>
+    <div class="w-96">
+      <img src="./images/img8.jpeg" class="w-96 h-96" alt="home-Photo">
+    </div>
+    <div class="w-96">
+      <img src="./images/img9.jpeg" class="w-96 h-96" alt="home-Photo">
+    </div>
+    <div class="w-96">
+      <img src="./images/img10.jpeg" class="w-96 h-96" alt="home-Photo">
+    </div>
+  </div>
+
+  <script>
+    fetch('./navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+
+        // Add event listener to the hamburger icon
+        const menuToggle = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      });
+  </script>
+</body>
+</html>

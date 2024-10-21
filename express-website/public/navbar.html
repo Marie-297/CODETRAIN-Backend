@@ -1,0 +1,27 @@
+<nav class="bg-gray-800 text-white py-4 px-8">
+  <div class="flex justify-between items-center">
+    <div class="text-3xl font-bold">
+      <a href="#" class="hover:text-gray-400">Marie Gallery</a>
+    </div>
+    <div class="space-x-8 hidden md:flex">
+      <a href="/" class="hover:text-gray-400">Home</a>
+      <a href="/about" class="hover:text-gray-400">About</a>
+      <a href="/services" class="hover:text-gray-400">Services</a>
+      <a href="/contact" class="hover:text-gray-400">Contact</a>
+    </div>
+    <div class="md:hidden">
+      <button id="menuButton" title="btn" class="focus:outline-none">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden flex-col space-y-4 mt-4">
+    <a href="/" class="block text-center hover:text-gray-400">Home</a>
+    <a href="/about" class="block text-center hover:text-gray-400">About</a>
+    <a href="/services" class="block text-center hover:text-gray-400">Services</a>
+    <a href="/contact" class="block text-center hover:text-gray-400">Contact</a>
+  </div>
+</nav>

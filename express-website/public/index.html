@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Home</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+  <h1 class="font-extrabold lg:text-6xl text-center py-10 sm:text-3xl sm:px-20">Welcome to our Gallery-Showroom Home Page</h1>
+  <div class="lg:flex-row flex sm:mb-20 lg:justify-between w-full px-20 gap-4 sm:flex-col">
+    <div class="lg:w-1/2 sm:w-full">
+      <p class="text-2xl">
+        Welcome to <span class="italic font-extrabold animate-popAndFade">Marie Gallery</span>, where art meets inspiration. Our gallery is a curated space dedicated to showcasing the works of both emerging and established artists from around the world. Whether you're drawn to contemporary abstracts, classical landscapes, or modern sculptures, we offer a diverse collection that captivates the imagination and ignites creative expression.
+
+        Explore our latest exhibitions, immerse yourself in vibrant colors and bold designs, or reflect on subtle strokes of timeless pieces. At [Gallery Name], we believe art has the power to transform, connect, and inspire, making every visit a unique journey into the world of creativity.
+      </p>
+    </div>
+    <div class="lg:w-1/2 sm:w-full">
+      <img src="./images/homeImg.jpeg" class="w-full h-auto" alt="home-Photo">
+    </div>
+  </div>
+  <script>
+    fetch('./navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+
+        // Add event listener to the hamburger icon
+        const menuToggle = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      });
+  </script>
+</body>
+</html>

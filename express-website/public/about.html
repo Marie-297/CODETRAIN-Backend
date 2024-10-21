@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Home</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+  <h1 class="font-extrabold lg:text-6xl text-center py-10 sm:text-3xl sm:px-20">About Marie Gallery</h1>
+  <div class="lg:flex-row items-center flex sm:mb-20 lg:justify-between w-full px-20 gap-4 sm:flex-col">
+    <div class="lg:w-1/2 sm:w-full">
+      <h3 class="text-center mb-10 font-extrabold text-4xl">Our Story</h3>
+      <p class="text-2xl">
+        Welcome to Marie Gallery, where creativity and inspiration converge. Our gallery is a vibrant space dedicated to showcasing a diverse range of artistic expressions, from contemporary abstracts to classic masterpieces. We believe in the transformative power of art and its ability to connect people across cultures and generations.
+      </p>
+    </div>
+    <div class="lg:w-1/2 sm:w-full">
+      <img src="./images/art1.jpeg" class="w-full h-96" alt="home-Photo">
+    </div>
+  </div>
+
+  <div class="lg:flex-row-reverse items-center flex sm:mb-20 lg:justify-between w-full px-20 gap-4 sm:flex-col">
+    <div class="lg:w-1/2 sm:w-full">
+      <h3 class="text-center mb-10 font-extrabold text-4xl">Our Mission</h3>
+      <p class="text-2xl">
+        At Marie Gallery, our mission is to inspire and ignite artistic expression in every visitor. We aim to cultivate a welcoming environment that encourages the appreciation and understanding of art in all its forms. Whether you are an art enthusiast, a collector, or simply curious about the world of art, we invite you to embark on a unique journey of creativity with us.
+      </p>
+    </div>
+    <div class="lg:w-1/2 sm:w-full">
+      <img src="./images/art2.jpeg" class="w-full h-96" alt="home-Photo">
+    </div>
+  </div>
+
+  <div class="lg:flex-row items-center flex sm:mb-20 lg:justify-between w-full px-20 gap-4 sm:flex-col">
+    <div class="lg:w-1/2 sm:w-full">
+      <h3 class="mb-10 text-center font-extrabold text-4xl">Exhibitions</h3>
+      <p class="text-2xl">
+        Our curated collection features works from both emerging and established artists, highlighting a wide array of styles and mediums. From striking abstract paintings to intricate sculptures, each piece tells a story that invites contemplation and dialogue. We regularly host exhibitions that explore various themes and artistic movements, providing our visitors with fresh perspectives and experiences.
+      </p>
+    </div>
+    <div class="lg:w-1/2 sm:w-full">
+      <img src="./images/art3.jpeg" class="w-full h-96" alt="home-Photo">
+    </div>
+  </div>
+
+  <div class="lg:flex-row-reverse items-center flex sm:mb-20 lg:justify-between w-full px-20 gap-4 sm:flex-col">
+    <div class="lg:w-1/2 sm:w-full">
+      <h3 class="text-center font-extrabold text-4xl mb-10">Engaging with the Community</h3>
+      <p class="text-2xl">
+        At the heart of Marie Gallery is our commitment to nurturing creativity and supporting our local artist community. We engage with artists through collaborations, workshops, and community events, providing them with a platform to showcase their work and connect with art lovers. Our goal is to foster a dynamic artistic dialogue that enriches our community and inspires future generations.
+      </p>
+    </div>
+    <div class="lg:w-1/2 sm:w-full">
+      <img src="./images/art4.jpeg" class="w-full h-96" alt="home-Photo">
+    </div>
+  </div>
+  <script>
+    fetch('./navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+
+        // Add event listener to the hamburger icon
+        const menuToggle = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+        }
+      });
+  </script>
+</body>
+</html>
