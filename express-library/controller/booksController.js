@@ -1,19 +1,24 @@
+const bookLists = require('../public/bookList');
+
 exports.getAllBooks = (req,res) => {
-  res.send("Get all books")
+  res.json(bookLists)
 };
 
 exports.getBookById = (req,res) => {
-  res.send(`Get book by id: ${req.params.id}`)
+  const book = bookLists.find(bookItem => bookItem.id == req.params.id);
+  res.json(book);
 };
 
 exports.addBook = (req,res) => {
-  res.send(`Add book: ${JSON.stringify(req.body)}`)
+  res.json(`New Book Added: (${JSON.stringify(req.body)})`)
 };
 
 exports.updateBook = (req,res) => {
-  res.send(`Update book by id: ${req.params.id}, new data: ${JSON.stringify(req.body)}`)
+  const book = bookLists.find(bookItem => bookItem.id == req.params.id);
+  res.json(book);
 };
 
 exports.deleteBook = (req,res) => {
-  res.send(`Delete book by id: ${req.params.id}`)
+  const book = bookLists.find(bookItem => bookItem.id == req.params.id);
+  res.json(book);
 };
