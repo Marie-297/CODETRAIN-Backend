@@ -1,0 +1,8 @@
+{
+  "name": "express-library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "localhost:3000",
+  "author": "Marie",
+  "license": "MIT"
+}
