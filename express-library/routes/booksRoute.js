@@ -3,7 +3,7 @@ const { getAllBooks, getBookById, deleteBook, updateBook, addBook } = require('.
 
 const router = express.Router();
 
-router.route('/books').get(getAllBooks).post(addBook)
-router.route('/books/:id').get(getBookById).delete(deleteBook).patch(updateBook);
+router.route('/').get(getAllBooks).post(addBook)
+router.route('/:id').get(getBookById).delete(deleteBook).patch(updateBook);
 
 module.exports = router;
